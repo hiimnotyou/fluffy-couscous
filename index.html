@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nae nae</title>
+<style>
+    #fullscreen-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+  iframe {
+  border: none;
+  width: 960;
+  height: 540px;
+}
+</style>
+</head>
+<body>
+  <iframe src="https://36ljf4-8080.csb.app/"></iframe>
+<iframe id="myIframe" src="https://developmentbuild.herokuapp.com/service/hvtrs8%2F-nmw%2Cge%2Frlcy-rmbnoz-aoppmrctkol%2F7369-rmbnoz" width="100%" height="100%" allowfullscreen></iframe>
+
+<button id="fullscreen-btn">Fullscreen RBLX</button>
+
+<script>
+    const iframe = document.getElementById('myIframe');
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+
+    fullscreenBtn.addEventListener('click', () => {
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { /* Firefox */
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+            iframe.msRequestFullscreen();
+        }
+    });
+</script>
+
+</body>
+</html>
